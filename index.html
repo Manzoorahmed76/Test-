@@ -103,7 +103,7 @@
       <div class="title">Ashlynn Hosting</div>
       <button type="button" class="btn" id="viewCacheBtn" title="View history"><i class="fas fa-clock"></i></button>
       <div class="card-body">
-          <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+          <form id="uploadForm" action="https://b4b009a7.test-5n8.pages.dev/upload" method="post" enctype="multipart/form-data">
               <div class="file-input-container">
                   <input id="fileInput" name="file" type="file" class="form-control-file" data-browse-on-zone-click="true" multiple>
               </div>
@@ -209,7 +209,7 @@
                       }
                       const formData = new FormData($('#uploadForm')[0]);
                       formData.set('file', file, file.name);
-                      const uploadResponse = await fetch('/upload', { method: 'POST', body: formData });
+                      const uploadResponse = await fetch('https://b4b009a7.test-5n8.pages.dev/upload', { method: 'POST', body: formData });
                       const responseData = await handleUploadResponse(uploadResponse);
                       if (responseData.error) {
                           toastr.error(responseData.error);
